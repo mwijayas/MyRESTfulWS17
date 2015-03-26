@@ -1,0 +1,49 @@
+<div class="container">
+    <h2>View 1</h2>
+    <div>
+        Test - Data retrieved via RESTful Web Services:: Name = {{testname}}
+    </div>
+    <br />
+    Name :
+    <br />
+    <input type="text" data-ng-model="filter.name" />
+
+    <ul>
+        <li data-ng-repeat="cust in customers | filter:filter.name | orderBy:'city'"> {{cust.name | uppercase}} - {{cust.city}}</li>
+    </ul>
+
+    <br />
+    Customer Name :
+    <br />
+    <input type="text" data-ng-model="newCustomer.name" />
+    <br />
+    Customer City :
+    <br />
+    <input type="text" data-ng-model="newCustomer.city" />
+    <br />
+    <button data-ng-click="addCustomer()" >Add Customer</button>
+    <br />
+    <a href="#/view2">View 2</a>
+
+    <div ui-grid="{ data: myData }" class="myGrid"></div>
+    </br>
+    <div id="grid1" ui-grid="gridOptions" class="grid"></div>
+
+    </br>
+    <p>Your models data</p>
+    <p style="height:80px; width:100%; border: 1px solid #ddd">
+        {{data.text}}
+    </p>
+
+    <wysiwyg textarea-id="question"
+             textarea-class="form-control"
+             textarea-height="180px"
+             textarea-name="textareaQuestion"
+             textarea-required ng-model="data.text"
+             enable-bootstrap-title="true"
+             >
+
+    </wysiwyg>
+    <button ng-click="setDisabled()">Disable</button>
+
+</div>
