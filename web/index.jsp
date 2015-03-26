@@ -11,7 +11,7 @@
     <title>JSP PAGE</title>
       MAHIMA IS HERE : JSP PAGE
       </br>
-      Github integration
+      Github integration - attempt 2
   </head>
   <body>
 
